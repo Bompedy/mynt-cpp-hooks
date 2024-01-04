@@ -2,6 +2,6 @@
 #include <iostream>
 #include "hooks.h"
 
-JNIEXPORT void JNICALL Java_me_lucas_mynt_Test_printHello(JNIEnv *, jobject) {
+JNIEXPORT void JNICALL Java_me_purp_mynt_Test_printHello(JNIEnv *, jobject) {
     std::cout << "Hello from C++!" << std::endl;
 }
