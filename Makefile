@@ -2,8 +2,8 @@ CXX = clang++
 CXXFLAGS = -std=c++20
 
 #jni
-JNI_INCLUDE_PATH = /home/ubuntu/.jdks/azul-17.0.9/include
-JNI_INCLUDE_PATH2 = /home/ubuntu/.jdks/azul-17.0.9/include/linux
+JNI_INCLUDE_PATH = $(JAVA_HOME)/include
+JNI_INCLUDE_PATH2 = $(JAVA_HOME)/include/linux
 #jni
 
 #iouring
