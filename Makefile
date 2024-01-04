@@ -13,10 +13,11 @@ LIBURING_LIB = -luring
 #iouring
 
 SRCS = src/main.cpp
-LIBRARY_TARGET = build/libmynt-hooks.so
+LIBRARY_TARGET = /home/ubuntu/projects/mynt-iouring/libmynt-hooks.so
 EXECUTABLE_TARGET = build/libmynt-hooks
 
-all: clean $(LIBRARY_TARGET) $(EXECUTABLE_TARGET)
+all: clean $(LIBRARY_TARGET)
+#$(EXECUTABLE_TARGET)
 
 $(LIBRARY_TARGET): $(SRCS) src/hooks.h
 	$(CXX) $(CXXFLAGS) -shared -fPIC -o $(LIBRARY_TARGET) $(SRCS) -I$(JNI_INCLUDE_PATH) -I$(JNI_INCLUDE_PATH2) -I$(LIBURING_INCLUDE_DIR) -L$(LIBURING_LIB_DIR) $(LIBURING_LIB)
